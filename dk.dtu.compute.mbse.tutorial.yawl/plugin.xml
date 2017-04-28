@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+	<extension
+	id="dk.dtu.compute.mbse.yawl.pntd"
+	name="YAWL Nets"
+	point="org.pnml.tools.epnk.pntd">
+	<type
+	class="dk.dtu.compute.mbse.yawl.impl.YAWLNetImpl"
+	description="YAWL Nets" />
+	</extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated yawl -->
+      <package
+            uri="http://se.compute.dtu.dk/mbse/yawl"
+            class="dk.dtu.compute.mbse.yawl.YawlPackage"
+            genModel="model/yawl.genmodel"/>
+   </extension>
+
+</plugin>
