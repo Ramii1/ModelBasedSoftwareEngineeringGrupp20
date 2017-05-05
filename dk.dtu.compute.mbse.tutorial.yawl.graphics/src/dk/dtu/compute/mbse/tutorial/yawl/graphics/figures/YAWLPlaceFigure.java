@@ -71,7 +71,22 @@ public class YAWLPlaceFigure extends PlaceFigure {
 			graphics.drawPolygon(new int[]{x1,y1, x2,y2, x3,y3});
 			graphics.popState();
 		}
-		
+		if (type.equals(PType.FINISH)) {
+			graphics.pushState();
+			//Obtain default color for green from OS (this way, we
+			// do not need to dispose it later)
+			Display display = Display.getCurrent();
+			Color red = display.getSystemColor(SWT.COLOR_RED);
+			graphics.setBackgroundColor(red);
+			graphics.setLineWidth(1);
+			int x1 = rectangle.x + d1 + 1;
+			int y1 = rectangle.y + d2;
+			
+			graphics.fillRectangle(x1, y1, d1, d2);
+			graphics.drawRectangle(x1, y1, d1, d2);
+			graphics.popState();
+		}
+				
 	}
 
 }

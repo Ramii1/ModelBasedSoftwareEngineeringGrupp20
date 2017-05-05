@@ -23,7 +23,7 @@ import dk.dtu.compute.mbse.yawl.YawlPackage;
  */
 public class YAWLGraphics extends GraphicalExtension {
 
-	
+
 	public YAWLGraphics() {
 		super();
 	}
@@ -43,7 +43,7 @@ public class YAWLGraphics extends GraphicalExtension {
 			results.add(YawlPackage.eINSTANCE.getPlace());
 			// No graphical extension for places
 			// results.add((TechnicalPackage.eINSTANCE.getPlace());
-			//results.add(TechnicalPackage.eINSTANCE.getTransition());
+			// results.add(YawlPackage.eINSTANCE.getTransition());
 		}
 		return results;
 	}
@@ -56,8 +56,6 @@ public class YAWLGraphics extends GraphicalExtension {
 		return null;
 	}
 
-	
-	   
 	@Override
 	public IUpdateableFigure createPlaceFigure(Place place) {
 		if (place instanceof dk.dtu.compute.mbse.yawl.Place) {
@@ -65,12 +63,12 @@ public class YAWLGraphics extends GraphicalExtension {
 		}
 		return null;
 	}
-	
+
 	/*
 	@Override
 	public IUpdateableFigure createTransitionFigure(Transition transition) {
-		if (transition instanceof org.pnml.tools.epnk.tutorials.app.technical.Transition) {
-			return new TechnicalNetTypeTransitionFigure(transition);
+		if (transition instanceof dk.dtu.compute.mbse.yawl.Transition) {
+			return new YAWLTransitionFigure(transition);
 		}
 		return null;
 	}

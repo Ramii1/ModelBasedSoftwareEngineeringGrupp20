@@ -21,7 +21,7 @@ import dk.dtu.compute.mbse.yawl.functions.YAWLFunctions;
 public class YAWLArcFigure extends ArcFigure {
 
 	private AType arcType;
-	
+
 	public YAWLArcFigure(Arc arc) {
 		super(arc);
 		arcType = YAWLFunctions.getType(arc);
@@ -54,5 +54,4 @@ public class YAWLArcFigure extends ArcFigure {
 			this.setLineStyle(SWT.LINE_DASH);
 		}
 	}
-
 }
